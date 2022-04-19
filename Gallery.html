@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <style>
+    img {
+      width: 400px;
+      height: 400px;
+    }
+
+    h1 {
+      padding-top: 30px;
+      padding-left: 10px;
+    }
+
+    .slideshow-container
+    {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      padding-top: 40px;
+      padding-right: 90px;
+    }
+
+    .slideshow-container div
+    {
+      margin: 0 auto;
+      width: 1100px;
+      text-align: center;
+    }
+
+    .previous, .next
+    {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      color: black;
+      font-weight: bold;
+      font-size: 50px;
+      transition: 0.6s ease;
+      border-radius: 3px 3px;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 3px;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+  </style>
+</head>
+<div id="nav-placeholder"></div>
+<script>
+  $(function () {
+    $("#nav-placeholder").load("navigation_bar.html");
+  });
+</script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="icon"
+      href="img/png-transparent-japanese-curry-japanese-cuisine-emoji-food-curry-food-orange-sticker-thumbnail.png">
+
+<body>
+<h1> Gallery </h1>
+
+<div class="slideshow-container">
+  <div class="my_slides fade">
+    <img src="img/258s.jpg" alt="fill">
+    <div class="text">The Famous Katsu-Don</div>
+  </div>
+
+  <div class="my_slides fade">
+    <img src="img/photo1jpg.jpg" alt="fill">
+    <div class="text">Shrimp Tempura</div>
+  </div>
+
+  <div class="my_slides fade">
+    <img src="img/ducks-restaurant.jpg" alt="fill">
+    <div class="text">Cabbage Slaw</div>
+  </div>
+
+
+  <div class="my_slides fade">
+    <img src="img/unnamed%20(1).jpg" alt="fill">
+    <div class="text">Handmade Cold Soba</div>
+  </div>
+
+
+  <div class="my_slides fade">
+    <img src="img/unnamed%20(2).jpg" alt="fill">
+    <div class="text">Chicken Katsu Curry</div>
+  </div>
+
+  <div class="my_slides fade">
+    <img src="img/unnamed.jpg" alt="fill">
+    <div class="text">Oyako-Don</div>
+  </div>
+
+
+  <a class="previous" onclick="plus_slides(-1)">&#10094;</a>
+  <a class="next" onclick="plus_slides(1)">&#10095;</a>
+</div>
+<script>
+  $(function () {
+    $("#nav-placeholder").load("navigation_bar.html");
+  });
+</script>
+
+<script>
+
+  let slide_index = 1;
+  show_slides(slide_index);
+
+  function plus_slides(n) {
+    show_slides(slide_index += n);
+  }
+
+  function show_slides(n) {
+    let slides = document.getElementsByClassName("my_slides");
+     if (n > slides.length)
+     {
+      slide_index = 1
+     }
+
+     for (let i = 0; i < slides.length; i++)
+     {
+       slides[i].style.display = "none";
+     }
+    slides[slide_index - 1].style.display = "block";
+  }
+
+</script>
+</body>
+</html>
