@@ -1,4 +1,4 @@
-</head>
+
 <body>
 
 <h1>Disclaimer</h1>
@@ -16,4 +16,4 @@
 
 
 </body>
-</html>
+
