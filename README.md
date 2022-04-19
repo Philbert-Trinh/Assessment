@@ -1,4 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nothing</title>
+  <style>
+    p {
+      font-size: 20px;
+    }
 
+    button {
+      font-size: 20px;
+    }
+  </style>
+
+</head>
+<body>
 
 <h1>Disclaimer</h1>
 <p> The website you are about to see is not the official website of this establishment.<br>
@@ -16,4 +32,3 @@
 
 </body>
 </html>
-
