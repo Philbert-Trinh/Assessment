@@ -14,8 +14,7 @@
       padding-left: 10px;
     }
 
-    .slideshow-container
-    {
+    .slideshow-container {
       max-width: 1000px;
       position: relative;
       margin: auto;
@@ -23,15 +22,13 @@
       padding-right: 90px;
     }
 
-    .slideshow-container div
-    {
+    .slideshow-container div {
       margin: 0 auto;
       width: 1100px;
       text-align: center;
     }
 
-    .previous, .next
-    {
+    .previous, .next {
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -110,7 +107,6 @@
     $("#nav-placeholder").load("navigation_bar.html");
   });
 </script>
-
 <script>
 
   let slide_index = 1;
@@ -122,16 +118,14 @@
 
   function show_slides(n) {
     let slides = document.getElementsByClassName("my_slides");
-     if (n > slides.length)
-     {
+    if (n > slides.length) {
       slide_index = 1
-     }
+    }
 
-     for (let i = 0; i < slides.length; i++)
-     {
-       slides[i].style.display = "none";
-     }
-    slides[slide_index - 1].style.display = "block";
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slide_index - 1].style.display = "";
   }
 
 </script>
