@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Nothing</title>
-  <style>
-    p {
-      font-size: 20px;
-    }
-
-    button {
-      font-size: 20px;
-    }
-  </style>
-
 </head>
 <body>
 
